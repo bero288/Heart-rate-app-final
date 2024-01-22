@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Make it compatible to mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="/js/client.js" defer></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/css/app.css" />
+    <title>Heart disease prediction</title>
+  </head>
+  <body>
+    <div class="login">
+      <h1>Heart disease prediction</h1>
+      <!-- Action is where the data is sent. In our case, predict page.
+     If action is omitted, it assumed to be the current page -->
+      <form onsubmit="saveToLocalStorage(event)">
+        <div class="mb-3">
+          <label for="sex" class="form-label"
+            >Sex (Male = 1 & Female = 0)</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="sex"
+            placeholder="Sex"
+            id="sex"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="age" class="form-label">enter your age</label>
+          <input
+            type="text"
+            class="form-control"
+            name="age"
+            placeholder="age"
+            id="age"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="currentSmoker" class="form-label"
+            >current smoker? (yes = 1 & no = 0)</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="currentSmoker"
+            placeholder="are you a current smoker ?"
+            id="currenStmoker"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="cigsPerDay" class="form-label"
+            >number of cigarettes per day (non-smoker = 0)</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="cigsPerDay"
+            placeholder="cigarettes per day"
+            id="cigsPerDay"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="BPMeds" class="form-label"
+            >Do you take blood pressure medications?</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="BPMeds"
+            placeholder="yes = 1 & no = 0"
+            id="BPMeds"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="prevalentStroke" class="form-label"
+            >Did you have prevalent stroke ?</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="prevalentStroke"
+            placeholder="yes = 1 & no = 0"
+            id="prevalentStroke"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="prevalentHyp" class="form-label"
+            >Did you have prevalent Hypertension ?</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="prevalentHyp"
+            placeholder="yes = 1 & no = 0"
+            id="prevalentHyp"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="diabetes" class="form-label">are you diabetic?</label>
+          <input
+            type="text"
+            class="form-control"
+            name="diabetes"
+            placeholder="yes = 1 & no = 0"
+            id="diabetes"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="BMI" class="form-label">your body mass index (BMI)</label>
+          <input
+            type="text"
+            class="form-control"
+            name="BMI"
+            placeholder="enter your BMI"
+            id="BMI"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      <h4></h4>
+    </div>
+  </body>
+</html>
